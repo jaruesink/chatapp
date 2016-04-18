@@ -1,0 +1,9 @@
+{
+  "firebase": "brilliant-fire-1820",
+  "public": "dist",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

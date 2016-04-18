@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Chatapp</title>
+  <base href="/">
+  {{content-for 'head'}}
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- Service worker support is disabled by default.
+       Install the worker script and uncomment to enable.
+       Only enable service workers in production.
+  <script type="text/javascript">
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/worker.js').catch(function(err) {
+        console.log('Error installing service worker: ', err);
+      });
+    }
+  </script>
+  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="app/styles/app.css" charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+</head>
+<body>
+  <chat-app>Loading...</chat-app>
+
+  <script src="vendor/es6-shim/es6-shim.js"></script>
+  <script src="vendor/systemjs/dist/system-polyfills.js"></script>
+  <script src="vendor/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="vendor/systemjs/dist/system.src.js"></script>
+  <script src="vendor/rxjs/bundles/Rx.js"></script>
+
+  <script src="vendor/angular2/bundles/angular2.dev.js"></script>
+  <script src="vendor/angular2/bundles/http.dev.js"></script>
+  <script src="vendor/angular2/bundles/router.dev.js"></script>
+
+  <script>
+  System.config({
+    map: {
+      firebase: 'vendor/firebase/lib/firebase-web.js',
+      angularfire2: 'vendor/angularfire2'
+    },    
+    packages: {
+      app: {
+        format: 'register',
+        defaultExtension: 'js'
+      },
+      angularfire2: {
+        defaultExtension: 'js',
+        main: 'angularfire2.js'
+      }
+    }
+  });
+  System.import('app.js').then(null, console.error.bind(console));
+  </script>
+</body>
+</html>

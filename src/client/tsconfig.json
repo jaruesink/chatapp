@@ -1,0 +1,33 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "mapRoot": "",
+    "module": "system",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noImplicitAny": false,
+    "outDir": "../dist/",
+    "rootDir": ".",
+    "sourceMap": true,
+    "target": "es5",
+    "inlineSources": true
+  },
+  "files": [
+    "app.ts",
+    "app/chatapp.spec.ts",
+    "app/chatapp.ts",
+    "app/home/home.ts",
+    "app/login/login.ts",
+    "app/services/dataservice.ts",
+    "typings.d.ts"
+  ],
+  "filesGlob": [
+    "**/*.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
+}
