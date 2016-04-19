@@ -30,7 +30,7 @@
       <label for="password">Password</label>
       <input id="password" type="password" name="password" class="form-control" (keyup)="incorrect_password = false" #password>
       <div *ngIf="incorrect_password" class="alert alert-danger m-t-1" role="alert">
-        <p>You enterred an incorrect password. Please try again.</p>
+        <p>You entered an incorrect password. Please try again.</p>
       </div>
     </fieldset>
     <button class="btn btn-success btn-block" type="submit" name="login">
