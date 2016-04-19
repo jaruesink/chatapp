@@ -18,7 +18,6 @@ export class HomePage {
     this.messages = data.af.list('/messages');
   }
   ngOnInit() {
-    this.data.auth_data = this.data.auth.getAuth();
     if (!this.data.auth_data) {
       this.router.navigate(['Login']);
     }

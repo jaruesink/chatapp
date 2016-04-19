@@ -1,4 +1,4 @@
-<div *ngIf="(data.af.auth | async)" class="container m-t-1">
+<div *ngIf="data.user" class="container m-t-1">
   Logged in as {{data.user.email}}
   <button class="btn btn-danger" type="button" name="logout" (click)="logout()">Logout</button>
   <ul class="m-t-2">
